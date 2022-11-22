@@ -1,38 +1,38 @@
 <template>
-  <div class="inputContainer">
-    <input
-      type="text"
-      class="inputField"
-      v-model="inputField"
-      @keydown.enter="inputFunc"
-    />
-    <button class="submitButton" @click="inputFunc">Submit</button>
-  </div>
-  <div class="inputListClass">
-    <ul>
-      <li v-for="inpt in inputArray" :key="inpt">{{ inpt }}</li>
-    </ul>
+  <div>
+    <div class="inputContainer">
+      <input
+        type="text"
+        class="inputField"
+        v-model="inputField"
+        @keydown.enter="inputFunc"
+      />
+      <button class="submitButton" @click="inputFunc">Submit</button>
+    </div>
   </div>
 </template>
 
 <script>
 import { ref, computed } from "vue";
 export default {
-  setup() {
+  // inject: ["inputFunc", "inputArray"],
+  setup(props, context) {
     let inputField = ref("");
-    let inputArray = [];
+
     let inputFunc = function () {
-      inputArray.push(inputField.value);
+      context.emit('updated', inputField.value)
+      console.log("============input", inputField.value
+      )
       inputField.value = "";
     };
-    const outgoals = computed(() => {
-      return inputField;
-    });
+    
     return {
       inputField,
       inputFunc,
-      inputArray,
-      outgoals,
+      // inputArray,
+      // passData
+      // sendEvent
+      // outgoals,
     };
   },
   // computed: {

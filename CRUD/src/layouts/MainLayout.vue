@@ -1,7 +1,7 @@
 <template>
   <div>
-    <InputField></InputField>
-    <TaskList></TaskList>
+    <InputField @updated="handleInput"></InputField>
+    <TaskList :list="mainList"></TaskList>
   </div>
 </template>
 
@@ -18,8 +18,17 @@ export default{
   InputField,
   TaskList
   },
-
   setup () {
+    const mainList = ref([])
+
+    const handleInput = (val) => {
+      mainList.value.push(val)
+    }
+
+    return{
+      handleInput,
+      mainList
+    }
 
     }
   }
