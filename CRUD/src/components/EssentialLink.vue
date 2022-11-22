@@ -1,10 +1,11 @@
 <template>
   <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
+  clickable
+  tag="a"
+  target="_blank"
+  :href="link"
   >
+  <h1>testing</h1>
     <q-item-section
       v-if="icon"
       avatar
