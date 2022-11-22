@@ -1,17 +1,21 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
+<dev class="parentDiv">
+  <main-layout></main-layout>
+</dev>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { ref } from 'vue'
+import MainLayout from 'src/layouts/MainLayout.vue';
 
-export default defineComponent({
-  name: 'IndexPage'
-})
+export default {
+  name: 'IndexPage',
+  components:{
+    MainLayout,
+  },
+  setup(){
+
+  }
+
+}
 </script>
