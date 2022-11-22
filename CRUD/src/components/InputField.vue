@@ -44,8 +44,10 @@ export default {
 </script>
 <style scoped>
 .inputContainer {
-  width: 250px;
+  width: 300px;
   height: 200px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px 5px #888888;  
   margin: auto;
   padding: 30px;
   display: flex;

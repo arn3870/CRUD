@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: rgb(43, 43, 43); height: 100vh;">
     <InputField @updated="handleInput"></InputField>
     <TaskList :list="mainList"></TaskList>
   </div>
@@ -33,3 +33,6 @@ export default{
     }
   }
 </script>
+
+<style>
+</style>
