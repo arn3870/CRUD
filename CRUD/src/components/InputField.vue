@@ -15,10 +15,8 @@
 <script>
 import { ref, computed } from "vue";
 export default {
-  // inject: ["inputFunc", "inputArray"],
   setup(props, context) {
     let inputField = ref("");
-
     let inputFunc = function () {
       context.emit('updated', inputField.value)
       console.log("============input", inputField.value
@@ -29,17 +27,8 @@ export default {
     return {
       inputField,
       inputFunc,
-      // inputArray,
-      // passData
-      // sendEvent
-      // outgoals,
     };
   },
-  // computed: {
-  //   outgoals() {
-  //     return this.inputField;
-  //   },
-  // },
 };
 </script>
 <style scoped>

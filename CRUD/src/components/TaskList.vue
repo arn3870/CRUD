@@ -3,7 +3,7 @@
     <ul>
       <li v-for="i in list" :key="i">
         <span>{{i}}</span>
-        <edit-to-do></edit-to-do>
+        <edit-to-do :i="i"></edit-to-do>
     </li>
   </ul>
   </div>
