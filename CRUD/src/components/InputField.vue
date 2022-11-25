@@ -17,10 +17,10 @@ import { ref, computed } from "vue";
 export default {
   setup(props, context) {
     let inputField = ref("");
-    let inputFunc = function () {
+   let inputFunc = function () {
       context.emit('updated', inputField.value)
-      console.log("============input", inputField.value
-      )
+      // console.log("============input", inputField.value
+      // )
       inputField.value = "";
     };
     

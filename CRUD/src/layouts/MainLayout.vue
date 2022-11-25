@@ -35,4 +35,9 @@ export default{
 </script>
 
 <style>
+input{
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}
 </style>

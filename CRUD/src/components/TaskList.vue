@@ -1,30 +1,33 @@
 <template>
   <div class="inputListItem">
     <ul>
-      <li v-for="i in list" :key="i">
-        <span>{{i}}</span>
-        <edit-to-do :i="i"></edit-to-do>
-    </li>
+      <li style="list-style:none" v-for="i in list" :key="i" >
+        <span v-show="showIcon">{{i}}</span>
+        <edit-to-do :i="i" @updateList="showIconFunc"></edit-to-do>
+      </li>
   </ul>
   </div>
 </template>
 
 <script>
 import EditToDo from './EditToDo.vue'
+import { ref } from 'vue'
 
 export default {
+  emits:['hideList'],
   props: ["list"],
   components:{
     EditToDo,
   },
   setup(){
  
-    const showIcon = false
+    let showIcon = ref(true)
     let showIconFunc = function(){
-      showIcon = !showIcon
-  }
+      showIcon.value = !showIcon.value
+      }
 return{
-  showIconFunc
+  showIconFunc,
+  showIcon
 }
   }
 
