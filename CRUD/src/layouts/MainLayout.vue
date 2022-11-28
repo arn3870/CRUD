@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: rgb(43, 43, 43); height: 100vh;">
+  <div>
     <InputField @updated="handleInput"></InputField>
     <TaskList :list="mainList"></TaskList>
   </div>

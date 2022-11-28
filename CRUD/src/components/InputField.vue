@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="inputContainer">
+      <p style="" class="ToDo">What needs to be done?</p>
       <input
         type="text"
         class="inputField"
@@ -32,20 +33,29 @@ export default {
 };
 </script>
 <style scoped>
+input{
+  background-color: #edf5e1;
+}
 .inputContainer {
+  margin-top: 100px !important;
   width: 300px;
   height: 200px;
   border-radius: 15px;
-  box-shadow: 5px 5px 20px 5px #888888;  
+  box-shadow: 5px 5px 20px 5px #379683;  
   margin: auto;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  background-color: #05386B;
 }
 .submitButton {
   display: flex;
   margin: auto;
+  background-color: #379683;
+  border: none;
+  border-radius: 10px;
+  font-weight: bolder;
+  color: #edf5e1;
 }
 .inputListClass {
   margin-top: 200px;
@@ -53,5 +63,12 @@ export default {
   height: 200px;
   margin: 200px;
   background-color: aqua;
+}
+.ToDo{
+  margin:auto;
+  color: #edf5e1;;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 15px;
 }
 </style>
