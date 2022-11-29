@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="inputContainer">
       <p style="" class="ToDo">What needs to be done?</p>
       <input
@@ -10,7 +9,6 @@
       />
       <button class="submitButton" @click="inputFunc">Submit</button>
     </div>
-  </div>
 </template>
 
 <script>
